@@ -156,7 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BusinessLogic">
-      <HintPath>..\Employee\bin\x86\Debug\BusinessLogic.dll</HintPath>
+      <HintPath>..\Employee\bin\Debug\BusinessLogic.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

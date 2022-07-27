@@ -8166,11 +8166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\PayrollApp\\PayrollApp.csproj",
+      "projectUniqueName": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\PayrollApp\\PayrollApp.csproj",
       "projectName": "PayrollApp",
-      "projectPath": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\PayrollApp\\PayrollApp.csproj",
+      "projectPath": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\PayrollApp\\PayrollApp.csproj",
       "packagesPath": "C:\\Users\\vogia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\PayrollApp\\obj\\",
+      "outputPath": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\PayrollApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

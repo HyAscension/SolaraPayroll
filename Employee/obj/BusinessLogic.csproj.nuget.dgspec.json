@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\Employee\\BusinessLogic.csproj": {}
+    "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\Employee\\BusinessLogic.csproj": {
+    "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\Employee\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\Employee\\BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\vogia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vogia\\Desktop\\NC 2021-22 Peer Tutoring\\S2022 - PROG1224\\PayrollApp\\Employee\\obj\\",
+        "outputPath": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
