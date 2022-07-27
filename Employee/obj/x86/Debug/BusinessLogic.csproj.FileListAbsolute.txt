@@ -1,0 +1,48 @@
+C:\Users\vogia\Desktop\PayrollApp\Employee\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\priconfig.xml
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\resources.resfiles
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\pri.resfiles
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\qualifiers.txt
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\vogia\Desktop\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.dll
+C:\Users\vogia\Desktop\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.pdb
+C:\Users\vogia\Desktop\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.pri
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.dll
+C:\Users\vogia\Desktop\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.pdb
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.dll
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.pdb
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\bin\x86\Debug\BusinessLogic.pri
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.dll
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\BusinessLogic.pdb
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\priconfig.xml
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\resources.resfiles
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\pri.resfiles
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\qualifiers.txt
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\vogia\OneDrive - NC\NC 2021-22 Peer Tutoring\S2022 - PROG1224\PayrollApp\Employee\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
