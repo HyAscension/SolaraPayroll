@@ -34,7 +34,7 @@ namespace BusinessLogic
         public string PostalCode
         {
             get => postalcode; 
-            set => postalcode = value != "" && !int.TryParse(value, out int notCode) ? value : "";
+            set => postalcode = value;
         }
 
         public override string ToString() => $"{Street}, {City}, {Province}, {PostalCode}.";

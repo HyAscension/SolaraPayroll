@@ -162,5 +162,15 @@ namespace PayrollApp
                 await message.ShowAsync();
             }
         }
+
+        private void lvTimesheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PayRoll roll = new PayRoll(DateTime.Now, empList);
+            //List<string> pr = PayRoll.Pr
+            //for (int i = 0; i < empList.Count; i++)
+            //{
+            //    lvTimesheet.Items.Add()
+            //s}
+        }
     }
 }

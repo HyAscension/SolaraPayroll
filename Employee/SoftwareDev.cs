@@ -12,8 +12,8 @@ namespace BusinessLogic
 
         public decimal Bi_Weekly
         {
-            get => bi_weekly;
-            set => bi_weekly = decimal.TryParse(value.ToString(), out decimal isWage) ? value : 0;
+            get => bi_weekly * 26;
+            set => bi_weekly = decimal.TryParse(value.ToString(), out decimal isWage) ? value / 26 : 0;
         }
 
         public SoftwareDev(string s, decimal b) : base(s)

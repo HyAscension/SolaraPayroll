@@ -58,7 +58,7 @@ namespace BusinessLogic
             //employee.Add(new Supervisor("839007338", "Miyah", "Seymour", DateTime.Parse("2021-08-19"), DateTime.Parse("1995-05-28"), "5130342122", "391 Foster City Blvd, Foster City, CA 94404, United States", "randomperson@gmail.com", 93000));
             //employee.Add(new Supervisor("184137137", "Mina", "Arroyo", DateTime.Parse("2021-08-25"), DateTime.Parse("1985-09-13"), "1430113790", "391 Foster City Blvd, Foster City, CA 94404, United States", "randomperson@gmail.com", 85000));
 
-            SoftwareDev softwareDev = new SoftwareDev("623771224", 156000);
+            SoftwareDev softwareDev = new SoftwareDev("623771224", 6000);
             softwareDev.FirstName = "Elizabeth";
             softwareDev.LastName = "Hicks";
             softwareDev.HireDate = DateTime.Parse("2021-10-27");

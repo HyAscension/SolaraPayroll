@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="PayrollApp.TimesheetPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayrollApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
+        <PivotItem HorizontalAlignment="Left" Height="0" Header="PivotItem -1" Margin="-334,460,0,0" VerticalAlignment="Top" Width="0">
+            <Grid/>
+        </PivotItem>
+        <Pivot Title="Pivot" Margin="10,105,-10,-105">
+            <PivotItem Header="PivotItem 0">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="PivotItem 1">
+                <Grid/>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>
+

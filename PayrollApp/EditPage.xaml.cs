@@ -87,7 +87,7 @@ namespace PayrollApp
                     txtHourlyRate.IsEnabled = false;
                     txtSalary.IsEnabled = true;
                     SoftwareDev salary = (SoftwareDev)person;
-                    txtSalary.Text = salary.Amount.ToString();
+                    txtSalary.Text = salary.Bi_Weekly.ToString();
                 }
                 if (person is SupplyManager)
                 {
@@ -172,7 +172,7 @@ namespace PayrollApp
                             PostalCode = txtZip.Text
                         };
                         emp.Email = txtEmail.Text;
-                        emp.Amount = decimal.Parse(txtSalary.Text);
+                        emp.Bi_Weekly = decimal.Parse(txtSalary.Text);
                     }
                 }
                 if (person is SupplyManager)

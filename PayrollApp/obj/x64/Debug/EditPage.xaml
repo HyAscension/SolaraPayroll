@@ -39,8 +39,8 @@
             <ComboBoxItem Content="Engineering Manager"/>
             <ComboBoxItem Content="Global Supply Manager"/>
         </ComboBox>
-        <Button x:ConnectionId='13' x:Name="btnUpdate" Content="Update" Margin="102,701,0,0" Width="140" Background="#FF11FF00" Foreground="White"                         VerticalAlignment="Top"/>
-        <Button x:ConnectionId='14' x:Name="btnCancel" Content="Cancel" Margin="258,701,0,0" Width="140" Background="#FFFF001D" Foreground="White"                         VerticalAlignment="Top"/>
+        <Button x:ConnectionId='13' x:Name="btnUpdate" Content="Update" Margin="581,468,0,0" Width="140" Background="#FF11FF00" Foreground="White"                         VerticalAlignment="Top"/>
+        <Button x:ConnectionId='14' x:Name="btnCancel" Content="Cancel" Margin="737,468,0,0" Width="140" Background="#FFFF001D" Foreground="White"                         VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="104,504,0,0" Text="City" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:ConnectionId='15' x:Name="txtCity" HorizontalAlignment="Left" Margin="102,527,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Background="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="102,564,0,0" Text="Province" TextWrapping="Wrap" VerticalAlignment="Top"/>

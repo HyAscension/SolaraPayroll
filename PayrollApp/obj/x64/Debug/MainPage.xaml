@@ -12,15 +12,23 @@
         <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
         <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
-
-        <ListView x:ConnectionId='2' x:Name="lvEmpList" Margin="0,235,0,0"                                               Background="White"/>
-        <ComboBox x:ConnectionId='3' x:Name="cboEmpType" Margin="100,176,0,0" Width="200"                                               />
-        <TextBlock HorizontalAlignment="Left" Margin="100,140,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Margin="315,140,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top"/>
-        <TextBox x:ConnectionId='4' x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="315,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"                                     />
-        <TextBlock HorizontalAlignment="Left" Margin="531,140,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top"/>
-        <DatePicker x:ConnectionId='5' x:Name="dtpkHiredDate" Margin="531,174,0,0" VerticalAlignment="Top"                                                        />
-        <Button x:ConnectionId='6' x:Name="btnAddNew" Content="Add New Employee" Margin="862,138,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22"                        />
+        <Pivot Title="" Margin="0,100,0,0">
+            <PivotItem Header="Home">
+                <Grid>
+                    <ListView x:ConnectionId='2' x:Name="lvEmpList" Margin="0,120,0,0"                                               Background="White"/>
+                    <ComboBox x:ConnectionId='3' x:Name="cboEmpType" Margin="100,54,0,0" Width="200"                                               />
+                    <TextBlock HorizontalAlignment="Left" Margin="100,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="315,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top"/>
+                    <TextBox x:ConnectionId='4' x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="315,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"                                     />
+                    <TextBlock HorizontalAlignment="Left" Margin="531,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top"/>
+                    <DatePicker x:ConnectionId='5' x:Name="dtpkHiredDate" Margin="531,54,0,0" VerticalAlignment="Top"                                                        />
+                    <Button x:ConnectionId='6' x:Name="btnAddNew" Content="Add New Employee" Margin="857,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22"                        />
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="PivotItem 1">
+                <Grid/>
+            </PivotItem>
+        </Pivot>
     </Grid>
 </Page>
 
