@@ -9,9 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="lvEmpList" Margin="0,151,0,11"/>
-        <ComboBox x:Name="cboEmpType" Margin="40,100,0,0" Width="200" SelectionChanged="cboEmpType_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="40,64,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200"/>
+        <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
 
+        <ListView x:Name="lvEmpList" Margin="0,235,0,0" SelectionChanged="lvEmpList_SelectionChanged" Background="White"/>
+        <ComboBox x:Name="cboEmpType" Margin="100,176,0,0" Width="200" SelectionChanged="cboEmpType_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,140,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="315,140,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="315,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="tbxEmpName_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="531,140,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dtpkHiredDate" Margin="531,174,0,0" VerticalAlignment="Top" SelectedDateChanged="dtpkHiredDate_SelectedDateChanged"/>
+        <Button x:Name="btnAddNew" Content="Add New Employee" Margin="862,138,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22" Click="btnAddNew_Click"/>
     </Grid>
 </Page>
