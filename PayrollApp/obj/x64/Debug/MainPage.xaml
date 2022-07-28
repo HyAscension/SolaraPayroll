@@ -15,18 +15,25 @@
         <Pivot Title="" Margin="0,100,0,0">
             <PivotItem Header="Home">
                 <Grid>
-                    <ListView x:ConnectionId='2' x:Name="lvEmpList" Margin="0,120,0,0"                                               Background="White"/>
-                    <ComboBox x:ConnectionId='3' x:Name="cboEmpType" Margin="100,54,0,0" Width="200"                                               />
-                    <TextBlock HorizontalAlignment="Left" Margin="100,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="315,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top"/>
-                    <TextBox x:ConnectionId='4' x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="315,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"                                     />
-                    <TextBlock HorizontalAlignment="Left" Margin="531,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top"/>
-                    <DatePicker x:ConnectionId='5' x:Name="dtpkHiredDate" Margin="531,54,0,0" VerticalAlignment="Top"                                                        />
-                    <Button x:ConnectionId='6' x:Name="btnAddNew" Content="Add New Employee" Margin="857,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22"                        />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34*"/>
+                        <ColumnDefinition Width="335*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListView x:ConnectionId='3' x:Name="lvEmpList" Margin="0,120,0,0"                                               Background="White" Grid.ColumnSpan="2"/>
+                    <ComboBox x:ConnectionId='4' x:Name="cboEmpType" Margin="100,54,0,0" Width="200"                                                Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="100,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="200,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:ConnectionId='5' x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="200
+                             ,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"                                      Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="440,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top" Grid.Column="1"/>
+                    <DatePicker x:ConnectionId='6' x:Name="dtpkHiredDate" Margin="440,54,0,0" VerticalAlignment="Top"                                                         Grid.Column="1"/>
+                    <Button x:ConnectionId='7' x:Name="btnAddNew" Content="Add New Employee" Margin="789,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22"                         Grid.Column="1"/>
                 </Grid>
             </PivotItem>
-            <PivotItem Header="PivotItem 1">
-                <Grid/>
+            <PivotItem Header="Timesheet">
+                <Grid>
+                    <ListView x:ConnectionId='2' x:Name="lvTimesheet" Margin="0,120,0,0" Background="White" Grid.ColumnSpan="2"                                                />
+                </Grid>
             </PivotItem>
         </Pivot>
     </Grid>

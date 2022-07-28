@@ -49,7 +49,7 @@ namespace PayrollApp
             List<string> fullInfo = new List<string>(100);
             foreach (Employee emps in e)
             {
-                fullInfo.Add($"{emps.Sin} {emps.FirstName} {emps.LastName} - Net: {emps.CalculatePay()} - Bonus: {emps.Bonus()} - Deductions: {emps.Pension()}");
+                fullInfo.Add($"{emps.Sin} {emps.FirstName} {emps.LastName} - Net: ${Math.Round(emps.CalculatePay(), 2)} - Bonus: ${Math.Round(emps.Bonus(), 2)} - Deductions: ${Math.Round(emps.IncomeTax(emps.CalculatePay()), 2)}");
             }
             return fullInfo;
         }
@@ -71,6 +71,13 @@ namespace PayrollApp
             foreach (Employee emp in empList)
             {
                 lvEmpList.Items.Add(emp.ToString());
+            }
+
+            PayRoll roll = new PayRoll(DateTime.Now, empList);
+            List<string> pr = roll.ProcessPayRoll();
+            for (int i = 0; i < empList.Count; i++)
+            {
+                lvTimesheet.Items.Add(pr[i]);
             }
         }
 
@@ -165,12 +172,7 @@ namespace PayrollApp
 
         private void lvTimesheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            PayRoll roll = new PayRoll(DateTime.Now, empList);
-            //List<string> pr = PayRoll.Pr
-            //for (int i = 0; i < empList.Count; i++)
-            //{
-            //    lvTimesheet.Items.Add()
-            //s}
+            
         }
     }
 }

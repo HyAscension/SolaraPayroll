@@ -21,8 +21,8 @@ namespace BusinessLogic
             bi_weekly = b;
         }
 
-        public override decimal Bonus() => Math.Round(Bi_Weekly * 0.05m, 2);
+        public override decimal Bonus() => Math.Round(bi_weekly * 0.05m, 2);
 
-        public override decimal CalculatePay() => Math.Round(Bi_Weekly, 2);
+        public override decimal CalculatePay() => Math.Round(bi_weekly, 2);
     }
 }

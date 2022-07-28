@@ -22,11 +22,12 @@
                     <ListView x:Name="lvEmpList" Margin="0,120,0,0" SelectionChanged="lvEmpList_SelectionChanged" Background="White" Grid.ColumnSpan="2"/>
                     <ComboBox x:Name="cboEmpType" Margin="100,54,0,0" Width="200" SelectionChanged="cboEmpType_SelectionChanged" Grid.ColumnSpan="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="100,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="179,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="179,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="tbxEmpName_TextChanged" Grid.Column="1"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="395,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top" Grid.Column="1"/>
-                    <DatePicker x:Name="dtpkHiredDate" Margin="395,54,0,0" VerticalAlignment="Top" SelectedDateChanged="dtpkHiredDate_SelectedDateChanged" Grid.Column="1"/>
-                    <Button x:Name="btnAddNew" Content="Add New Employee" Margin="721,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22" Click="btnAddNew_Click" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="200,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="200
+                             ,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="tbxEmpName_TextChanged" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="440,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top" Grid.Column="1"/>
+                    <DatePicker x:Name="dtpkHiredDate" Margin="440,54,0,0" VerticalAlignment="Top" SelectedDateChanged="dtpkHiredDate_SelectedDateChanged" Grid.Column="1"/>
+                    <Button x:Name="btnAddNew" Content="Add New Employee" Margin="789,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22" Click="btnAddNew_Click" Grid.Column="1"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Timesheet">
