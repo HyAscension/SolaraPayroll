@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-28T17:28:15.394</Modified>
+      <Modified>2022-07-28T20:04:46.939</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\PayrollApp.exe">
       <PackagePath>entrypoint\PayrollApp.exe</PackagePath>
-      <Modified>2022-07-28T17:28:14.876</Modified>
+      <Modified>2022-07-28T20:04:46.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -330,27 +330,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\PayrollApp.xr.xml">
       <PackagePath>PayrollApp.xr.xml</PackagePath>
-      <Modified>2022-07-28T17:10:39.775</Modified>
+      <Modified>2022-07-28T19:35:40.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-07-28T17:28:14.800</Modified>
+      <Modified>2022-07-28T20:04:46.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\AddPage.xbf">
       <PackagePath>AddPage.xbf</PackagePath>
-      <Modified>2022-07-28T17:28:14.795</Modified>
+      <Modified>2022-07-28T20:04:46.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\EditPage.xbf">
       <PackagePath>EditPage.xbf</PackagePath>
-      <Modified>2022-07-28T17:28:14.798</Modified>
+      <Modified>2022-07-28T20:04:46.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-07-28T17:28:14.800</Modified>
+      <Modified>2022-07-28T20:04:46.347</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\NewPaymentPage.xbf">
+      <PackagePath>NewPaymentPage.xbf</PackagePath>
+      <Modified>2022-07-28T20:04:46.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\TimesheetPage.xbf">
       <PackagePath>TimesheetPage.xbf</PackagePath>
-      <Modified>2022-07-28T17:28:14.800</Modified>
+      <Modified>2022-07-28T20:04:46.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -358,11 +362,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-07-28T14:55:54.449</Modified>
+      <Modified>2022-07-28T19:35:41.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\Core\PayrollApp.exe">
       <PackagePath>PayrollApp.exe</PackagePath>
-      <Modified>2022-07-28T17:28:15.390</Modified>
+      <Modified>2022-07-28T20:04:46.939</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

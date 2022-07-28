@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Text.Json;
 using BusinessLogic;
 using Windows.UI.Popups;
+using Windows.Globalization;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,31 +23,40 @@ namespace PayrollApp
 {
     public class PayRoll
     {
-        private DateTime c;
+        private DateTime paydate;
         private List<Employee> e;
+        
 
-        public decimal TotalAll
+        public string TotalAll
         {
             get
             {
-                decimal total = 0m;
+                DateTime payDate = DateTime.Today;
+                int totalEmp = 0;
+                decimal totalPay = 0;
+                decimal totalBonus = 0;
+                decimal totalDeductions = 0;
                 foreach (Employee emps in e)
                 {
-                    total += emps.CalculatePay();
+                    totalEmp++;
+                    totalPay += emps.CalculatePay();
+                    totalBonus += emps.Bonus();
+                    totalDeductions += emps.IncomeTax(emps.CalculatePay());
                 }
-                return total;
+
+                return $"Employee Count: {totalEmp} | Net Pay: ${Math.Round(totalPay, 2)} | Net Bonus: ${Math.Round(totalBonus, 2)} | Net Deductions: ${Math.Round(totalDeductions, 2)}";
             }
         }
 
-        public PayRoll(DateTime current, List<Employee> emps)
+        public PayRoll(DateTime current, Employee emps)
         {
-            c = current;
-            e = emps;
+            paydate = current;
+            e.Add(emps);
         }
 
         public List<string> ProcessPayRoll()
         {
-            List<string> fullInfo = new List<string>(100);
+            List<string> fullInfo = new List<string>();
             foreach (Employee emps in e)
             {
                 fullInfo.Add($"{emps.Sin} {emps.FirstName} {emps.LastName} - Net: ${Math.Round(emps.CalculatePay(), 2)} - Bonus: ${Math.Round(emps.Bonus(), 2)} - Deductions: ${Math.Round(emps.IncomeTax(emps.CalculatePay()), 2)}");
@@ -73,12 +83,12 @@ namespace PayrollApp
                 lvEmpList.Items.Add(emp.ToString());
             }
 
-            PayRoll roll = new PayRoll(DateTime.Now, empList);
-            List<string> pr = roll.ProcessPayRoll();
-            for (int i = 0; i < empList.Count; i++)
-            {
-                lvTimesheet.Items.Add(pr[i]);
-            }
+            //PayRoll roll = new PayRoll(DateTime.Now, empList);
+            //List<string> pr = roll.ProcessPayRoll();
+            //for (int i = 0; i < empList.Count; i++)
+            //{
+            //    lvStatements.Items.Add(pr[i]);
+            //}
         }
 
         private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -173,6 +183,11 @@ namespace PayrollApp
         private void lvTimesheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void btnNewPayment_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewPaymentPage));
         }
     }
 }

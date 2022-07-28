@@ -135,3 +135,8 @@ C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\Timesh
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\TimesheetPage.g.cs
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\TimesheetPage.xaml
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\TimesheetPage.xbf
+C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\NewPaymentPage.xbf
+C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.g.i.cs
+C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.g.cs
+C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xaml
+C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xbf

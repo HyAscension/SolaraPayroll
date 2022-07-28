@@ -273,6 +273,9 @@
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\NewPaymentPage.xbf">
+      <PackagePath>NewPaymentPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\TimesheetPage.xbf">
       <PackagePath>TimesheetPage.xbf</PackagePath>
     </AppxPackagedFile>
