@@ -54,6 +54,7 @@ namespace PayrollSamePage
             cboEmpType.Items.Add("Salary");
             cboEmpType.Items.Add("Software Developer");
             cboEmpType.Items.Add("Supply Manager");
+            lvEmpList.Items.Clear();
             foreach (Employee emp in empList)
             {
                 lvEmpList.Items.Add(emp.ToString());
@@ -212,9 +213,9 @@ namespace PayrollSamePage
                         SupplyManager salary = (SupplyManager)selectedPerson;
                         txtSalary.Text = salary.Salary.ToString();
                     }
+                    
                 }
             }
-
         }
 
         private async void btnAddNew_Click(object sender, RoutedEventArgs e)
@@ -247,7 +248,7 @@ namespace PayrollSamePage
             {
                 //for each employee type, where the employee have the same sin
                 //as the sin saved in mainpage, saved input data into emp object
-                foreach (Hourly emp in MainPage.empList.Where(p => p.FirstName == MainPage.EmpName))
+                foreach (Hourly emp in empList.Where(p => p.FirstName == EmpName))
                 {
                     emp.FirstName = txtFirst.Text;
                     emp.LastName = txtLast.Text;
@@ -268,7 +269,7 @@ namespace PayrollSamePage
             }
             if (selectedPerson is Salary)
             {
-                foreach (Salary emp in MainPage.empList.Where(p => p.FirstName == MainPage.EmpName))
+                foreach (Salary emp in empList.Where(p => p.FirstName == EmpName))
                 {
                     emp.FirstName = txtFirst.Text;
                     emp.LastName = txtLast.Text;
@@ -288,7 +289,7 @@ namespace PayrollSamePage
             }
             if (selectedPerson is SoftwareDev)
             {
-                foreach (SoftwareDev emp in MainPage.empList.Where(p => p.FirstName == MainPage.EmpName))
+                foreach (SoftwareDev emp in empList.Where(p => p.FirstName == EmpName))
                 {
                     emp.FirstName = txtFirst.Text;
                     emp.LastName = txtLast.Text;
@@ -308,7 +309,7 @@ namespace PayrollSamePage
             }
             if (selectedPerson is SupplyManager)
             {
-                foreach (SupplyManager emp in MainPage.empList.Where(p => p.FirstName == MainPage.EmpName))
+                foreach (SupplyManager emp in empList.Where(p => p.FirstName == EmpName))
                 {
                     emp.FirstName = txtFirst.Text;
                     emp.LastName = txtLast.Text;
@@ -325,12 +326,6 @@ namespace PayrollSamePage
                     emp.Email = txtEmail.Text;
                     emp.Salary = decimal.Parse(txtSalary.Text);
                 }
-            }
-
-            lvEmpList.Items.Clear();
-            foreach (Employee emp in empList)
-            {
-                lvEmpList.Items.Add(emp.ToString());
             }
 
             cboEmpType.IsEnabled = true;
