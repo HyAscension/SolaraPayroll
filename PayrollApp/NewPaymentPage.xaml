@@ -14,7 +14,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
         <ListView x:Name="lvEmps" Margin="0,251,0,0" SelectionMode="Multiple"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"><Run Text="Payment Date:"/><LineBreak/><Run Text=": "/></TextBlock>
-        <DatePicker x:Name="dtpkPayment" Margin="100,143,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dtpkPayDate" Margin="100,143,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnSubmit" Content="Submit" Margin="100,195,0,0" Width="140" Background="#FF11FF00" Foreground="White" Click="btnSubmit_Click" VerticalAlignment="Top"/>
         <Button x:Name="btnCancel" Content="Cancel" Margin="256,195,0,0" Width="140" Background="#FFFF001D" Foreground="White" Click="btnCancel_Click" VerticalAlignment="Top"/>
     </Grid>

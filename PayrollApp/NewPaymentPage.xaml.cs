@@ -24,15 +24,11 @@ namespace PayrollApp
     /// </summary>
     public sealed partial class NewPaymentPage : Page
     {
-        List<Employee> empList = Data.GetDataRecords();
-        public static PayRoll<Employee> payRoll;
-        List<Employee> eachEmp = new List<Employee>();
-
         public NewPaymentPage()
         {
             this.InitializeComponent();
             lvEmps.Items.Clear();
-            foreach (Employee emp in empList)
+            foreach (Employee emp in MainPage.empList)
             {
                 lvEmps.Items.Add(emp.ToString());
             }
@@ -40,34 +36,31 @@ namespace PayrollApp
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            var test = lvEmps.SelectedItems;
-            List<string> strEmp = new List<string>();
-            string output = "";
-            foreach (var t in test)
+            var msg = new MessageDialog(lvEmps.SelectedItems.ToString());
+            await msg.ShowAsync();
+            var newEmpListForPR = new List<Employee>();
+            foreach (Employee emp in MainPage.empList)
             {
-                strEmp.Add(t.ToString());
-            }
-            foreach (string strE in strEmp)
-            {
-                output = strE.Substring(strE.Length - 10);
-                foreach (Employee em in empList)
+                for (int i = 0; i < lvEmps.SelectedItems.Count; i++)
                 {
-                    if (em.Phone == output)
+                    if (lvEmps.SelectedItem.ToString().Contains(emp.FirstName))
                     {
-                        eachEmp.Add(em);
+                        newEmpListForPR.Add(emp);
                     }
                 }
             }
-            payRoll = new PayRoll<Employee>(dtpkPayment.Date.DateTime, eachEmp);
+            MainPage.newPR = new CalculatePayroll<Employee>(dtpkPayDate.Date.Date, newEmpListForPR);
+            MainPage.Created = true;
             this.Frame.Navigate(typeof(MainPage));
-            var message = new MessageDialog(output);
-            await message.ShowAsync();
-            //PayRoll pr = new PayRoll(dtpkPayment.Date.DateTime, );
+
+            //if name selected = name in list
+            //take the Employee object and add it into a new list
+            //then take that new list and add it with the date into calculatepayroll class
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

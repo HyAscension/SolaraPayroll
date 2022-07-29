@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-L4N7G50</Machine>
+    <WindowsUser>GiaHyMac</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>cc6148b2-3858-43e1-8f27-619eb5e8ab76</PackageIdentityName>
+    <PackageIdentityPublisher>CN=GiaHyMac</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\obj\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F779D1E39001EB9E688E7B242F6F03571F3C046BB2D88C7DF1B4B0FFE7B4C18F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>cc6148b2-3858-43e1-8f27-619eb5e8ab76_1.0.0.0_x64__2a2175ytv1agy</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>cc6148b2-3858-43e1-8f27-619eb5e8ab76_2a2175ytv1agy!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>cc6148b2-3858-43e1-8f27-619eb5e8ab76</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=GiaHyMac</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:54:03.882</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.exe">
+      <PackagePath>entrypoint\PayrollSamePage.exe</PackagePath>
+      <Modified>2022-07-29T17:54:03.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+      <Modified>2021-10-10T10:49:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\Employee\bin\Debug\BusinessLogic.dll">
+      <PackagePath>BusinessLogic.dll</PackagePath>
+      <Modified>2022-07-29T15:01:08.437</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+      <Modified>2020-12-02T08:52:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.915</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.960</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.526</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.567</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.593</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.353</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.773</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.610</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.625</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.279</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.288</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.328</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.306</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.221</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.270</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.239</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.114</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.123</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.166</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.174</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.184</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.193</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.782</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.792</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.802</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.814</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.830</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.713</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.747</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2022-07-28T13:12:46.084</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.508</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.657</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.143</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:29.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-07-29T17:19:28.772</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2022-07-29T16:57:53.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.xr.xml">
+      <PackagePath>PayrollSamePage.xr.xml</PackagePath>
+      <Modified>2022-07-29T17:11:04.505</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2022-07-29T17:54:03.320</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2022-07-29T17:54:03.320</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+      <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+      <Modified>2020-12-02T06:52:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2022-07-29T17:20:41.418</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\PayrollSamePage.exe">
+      <PackagePath>PayrollSamePage.exe</PackagePath>
+      <Modified>2022-07-29T17:54:03.877</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.30527.2</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.30527.2</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.30527.2</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.30316.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.30316.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.30316.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

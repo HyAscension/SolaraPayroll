@@ -16,64 +16,25 @@ using System.Text.Json;
 using BusinessLogic;
 using Windows.UI.Popups;
 using Windows.Globalization;
+using Windows.UI.ViewManagement;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace PayrollApp
 {
-    public class PayRoll<T>
-    {
-        
-        private DateTime paydate;
-        private List<Employee> e;
-        
-
-        public string TotalAll
-        {
-            get
-            {
-                DateTime payDate = DateTime.Today;
-                int totalEmp = 0;
-                decimal totalPay = 0;
-                decimal totalBonus = 0;
-                decimal totalDeductions = 0;
-                foreach (Employee emps in e)
-                {
-                    totalEmp++;
-                    totalPay += emps.CalculatePay();
-                    totalBonus += emps.Bonus();
-                    totalDeductions += emps.IncomeTax(emps.CalculatePay());
-                }
-
-                return $"Payment Date: {payDate.Date} Employee Count: {totalEmp} | Net Pay: ${Math.Round(totalPay, 2)} | Net Bonus: ${Math.Round(totalBonus, 2)} | Net Deductions: ${Math.Round(totalDeductions, 2)}";
-            }
-        }
-
-        public PayRoll(DateTime current, List<Employee> emps)
-        {
-            paydate = current;
-            e = emps;
-        }
-
-        public List<string> ProcessPayRoll()
-        {
-            List<string> fullInfo = new List<string>();
-            foreach (Employee emps in e)
-            {
-                fullInfo.Add($"{emps.Sin} {emps.FirstName} {emps.LastName} - Net: ${Math.Round(emps.CalculatePay(), 2)} - Bonus: ${Math.Round(emps.Bonus(), 2)} - Deductions: ${Math.Round(emps.IncomeTax(emps.CalculatePay()), 2)}");
-            }
-            return fullInfo;
-        }
-    }
-
     public sealed partial class MainPage : Page
     {
         public static List<Employee> empList = Data.GetDataRecords();
+        public static CalculatePayroll<Employee> newPR;
+        public static bool Created = false;
+
         public static string EmpName { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1366, 768));
+
             cboEmpType.Items.Add("");
             cboEmpType.Items.Add("Hourly");
             cboEmpType.Items.Add("Salary");
@@ -84,14 +45,11 @@ namespace PayrollApp
                 lvEmpList.Items.Add(emp.ToString());
             }
 
-            PayRoll<Employee> roll = new PayRoll<Employee>(DateTime.Now, empList);
-            List<string> pr = roll.ProcessPayRoll();
-            for (int i = 0; i < empList.Count; i++)
+            if (Created == true)
             {
-                lvStatements.Items.Add(pr[i]);
+                txtPaymentDate.Text = $"Payment Date: {newPR.PayDate.Date}";
+                lvStatements.ItemsSource = newPR.ProcessPayRoll();
             }
-
-            lvEmpTimesheet.Items.Add(NewPaymentPage.payRoll.TotalAll);
         }
 
         private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -183,16 +141,14 @@ namespace PayrollApp
             }
         }
 
-        private void btnNewPayment_Click(object sender, RoutedEventArgs e)
+        private void btnNewpayroll_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(NewPaymentPage));
         }
 
-        private void lvTimesheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lvStatements_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-        }
 
-        
+        }
     }
 }
