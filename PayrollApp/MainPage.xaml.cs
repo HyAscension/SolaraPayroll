@@ -21,8 +21,9 @@ using Windows.Globalization;
 
 namespace PayrollApp
 {
-    public class PayRoll
+    public class PayRoll<T>
     {
+        
         private DateTime paydate;
         private List<Employee> e;
         
@@ -44,14 +45,14 @@ namespace PayrollApp
                     totalDeductions += emps.IncomeTax(emps.CalculatePay());
                 }
 
-                return $"Employee Count: {totalEmp} | Net Pay: ${Math.Round(totalPay, 2)} | Net Bonus: ${Math.Round(totalBonus, 2)} | Net Deductions: ${Math.Round(totalDeductions, 2)}";
+                return $"Payment Date: {payDate.Date} Employee Count: {totalEmp} | Net Pay: ${Math.Round(totalPay, 2)} | Net Bonus: ${Math.Round(totalBonus, 2)} | Net Deductions: ${Math.Round(totalDeductions, 2)}";
             }
         }
 
-        public PayRoll(DateTime current, Employee emps)
+        public PayRoll(DateTime current, List<Employee> emps)
         {
             paydate = current;
-            e.Add(emps);
+            e = emps;
         }
 
         public List<string> ProcessPayRoll()
@@ -83,12 +84,14 @@ namespace PayrollApp
                 lvEmpList.Items.Add(emp.ToString());
             }
 
-            //PayRoll roll = new PayRoll(DateTime.Now, empList);
-            //List<string> pr = roll.ProcessPayRoll();
-            //for (int i = 0; i < empList.Count; i++)
-            //{
-            //    lvStatements.Items.Add(pr[i]);
-            //}
+            PayRoll<Employee> roll = new PayRoll<Employee>(DateTime.Now, empList);
+            List<string> pr = roll.ProcessPayRoll();
+            for (int i = 0; i < empList.Count; i++)
+            {
+                lvStatements.Items.Add(pr[i]);
+            }
+
+            lvEmpTimesheet.Items.Add(NewPaymentPage.payRoll.TotalAll);
         }
 
         private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -180,14 +183,16 @@ namespace PayrollApp
             }
         }
 
+        private void btnNewPayment_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewPaymentPage));
+        }
+
         private void lvTimesheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
         }
 
-        private void btnNewPayment_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(NewPaymentPage));
-        }
+        
     }
 }

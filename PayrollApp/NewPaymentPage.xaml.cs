@@ -25,7 +25,8 @@ namespace PayrollApp
     public sealed partial class NewPaymentPage : Page
     {
         List<Employee> empList = Data.GetDataRecords();
-        
+        public static PayRoll<Employee> payRoll;
+        List<Employee> eachEmp = new List<Employee>();
 
         public NewPaymentPage()
         {
@@ -53,11 +54,12 @@ namespace PayrollApp
                 {
                     if (em.Phone == output)
                     {
-                        PayRoll pr = new PayRoll(dtpkPayment.Date.DateTime, em);
-                        this.Frame.Navigate(typeof(MainPage));
+                        eachEmp.Add(em);
                     }
                 }
             }
+            payRoll = new PayRoll<Employee>(dtpkPayment.Date.DateTime, eachEmp);
+            this.Frame.Navigate(typeof(MainPage));
             var message = new MessageDialog(output);
             await message.ShowAsync();
             //PayRoll pr = new PayRoll(dtpkPayment.Date.DateTime, );

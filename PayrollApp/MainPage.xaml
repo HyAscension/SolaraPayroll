@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
-        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
+        <Rectangle HorizontalAlignment="Center" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="1921" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1919" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
         <Pivot Title="" Margin="0,100,0,0">
             <PivotItem Header="Home">
                 <Grid>
@@ -20,14 +20,13 @@
                         <ColumnDefinition Width="335*"/>
                     </Grid.ColumnDefinitions>
                     <ListView x:Name="lvEmpList" Margin="0,120,0,0" SelectionChanged="lvEmpList_SelectionChanged" Background="White" Grid.ColumnSpan="2"/>
-                    <ComboBox x:Name="cboEmpType" Margin="100,54,0,0" Width="200" SelectionChanged="cboEmpType_SelectionChanged" Grid.ColumnSpan="2"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="100,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="200,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="200
-                             ,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="tbxEmpName_TextChanged" Grid.Column="1"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="440,30,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top" Grid.Column="1"/>
-                    <DatePicker x:Name="dtpkHiredDate" Margin="440,54,0,0" VerticalAlignment="Top" SelectedDateChanged="dtpkHiredDate_SelectedDateChanged" Grid.Column="1"/>
-                    <Button x:Name="btnAddNew" Content="Add New Employee" Margin="789,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22" Click="btnAddNew_Click" Grid.Column="1"/>
+                    <ComboBox x:Name="cboEmpType" Margin="10,54,0,0" Width="200" SelectionChanged="cboEmpType_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="90,30,0,0" TextWrapping="Wrap" Text="Filter by Name" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:Name="tbxEmpName" HorizontalAlignment="Left" Margin="90,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="tbxEmpName_TextChanged" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="318,29,0,0" TextWrapping="Wrap" Text="Filter by Hired Date" VerticalAlignment="Top" Grid.Column="1"/>
+                    <DatePicker x:Name="dtpkHiredDate" Margin="318,53,0,0" VerticalAlignment="Top" SelectedDateChanged="dtpkHiredDate_SelectedDateChanged" Grid.Column="1"/>
+                    <Button x:Name="btnAddNew" Content="Add New Employee" Margin="650,40,0,0" VerticalAlignment="Top" Width="247" Height="46" FontSize="22" Click="btnAddNew_Click" Grid.Column="1"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Pay Statement">
@@ -38,7 +37,7 @@
             <PivotItem Header="Timesheet">
                 <Grid>
                     <ListView x:Name="lvEmpTimesheet" Margin="0,120,0,0" Background="White" SelectionMode="Multiple"></ListView>
-                    <Button x:Name="btnNewPayment" Content="Add New Payment" Margin="789,19,0,0" VerticalAlignment="Top" Width="247" Height="67" FontSize="22" Click="btnNewPayment_Click" Grid.Column="1"/>
+                    <Button x:Name="btnNewPayment" Content="Add New Payment" Margin="650,40,0,0" VerticalAlignment="Top" Width="247" Height="42" FontSize="22" Click="btnNewPayment_Click"/>
                 </Grid>
             </PivotItem>
         </Pivot>

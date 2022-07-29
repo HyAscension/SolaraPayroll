@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
-        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
+        <Rectangle HorizontalAlignment="Center" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="1919" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1919" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
         <ListView x:Name="lvEmps" Margin="0,251,0,0" SelectionMode="Multiple"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"><Run Text="Payment Date:"/><LineBreak/><Run Text=": "/></TextBlock>
         <DatePicker x:Name="dtpkPayment" Margin="100,143,0,0" VerticalAlignment="Top"/>

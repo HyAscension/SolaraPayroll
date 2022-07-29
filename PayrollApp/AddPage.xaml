@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="1000" Stroke="Black" VerticalAlignment="Center" Width="1500" Fill="#FFE1E1E1"/>
-        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FF232C32"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
+        <Rectangle HorizontalAlignment="Center" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="1919" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1919" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
         <TextBlock HorizontalAlignment="Left" Margin="102,148,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="txtFirst" HorizontalAlignment="Left" Margin="102,171,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Background="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="102,208,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top"/>

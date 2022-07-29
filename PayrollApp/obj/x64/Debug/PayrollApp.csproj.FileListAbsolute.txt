@@ -140,3 +140,8 @@ C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPay
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.g.cs
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xaml
 C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xbf
+C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.g.i.cs
+C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.g.cs
+C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xaml
+C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPaymentPage.xbf
+C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\NewPaymentPage.xbf
