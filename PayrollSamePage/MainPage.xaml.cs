@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using BusinessLogic;
 using Windows.UI.ViewManagement;
 using Windows.UI.Popups;
+using System.Data;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,7 +23,8 @@ namespace PayrollSamePage
 {
     public sealed partial class MainPage : Page
     {
-        private static List<Employee> empList = Data.GetDataRecords();
+        private List<Employee> empList = Data.GetDataRecords();
+        private List<Employee> payrollList = new List<Employee>();
         private Employee selectedPerson;
 
         private int ID { get; set; }
@@ -51,12 +53,17 @@ namespace PayrollSamePage
             btnAddNew.IsEnabled = false;
             btnCancel.IsEnabled = false;
 
+            btnNewpayroll.IsEnabled = true;
+            dtpkPayDate.IsEnabled = false;
+            btnPRSubmit.IsEnabled = false;
+
             btnAddNew.Visibility = Visibility.Collapsed;
 
             cboEmpType.ItemsSource = new string[] { "", "Hourly", "Salary", "Software Developer", "Supply Manager" };
             lvEmpList.Items.Clear();
             lvEmpList.ItemsSource = empList;
 
+            lvStatements.ItemsSource = payrollList;
         }
 
         private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -548,12 +555,43 @@ namespace PayrollSamePage
 
         private void btnNewpayroll_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(NewPaymentPage));
+            btnNewpayroll.IsEnabled = false;
+            dtpkPayDate.IsEnabled = true;
+            btnPRSubmit.IsEnabled = true;
+            var empObject = new CalculatePayroll<Employee>(DateTime.Now, empList);
+            List<string> prEmpList = new List<string>();
+            prEmpList = empObject.ProcessPayRoll();
+            lvStatements.ItemsSource = prEmpList;
+            lvStatements.SelectionMode = ListViewSelectionMode.Multiple;
         }
 
-        private void lvStatements_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnPRSubmit_Click(object sender, RoutedEventArgs e)
         {
+            btnNewpayroll.IsEnabled = true;
+            dtpkPayDate.IsEnabled = false;
+            btnPRSubmit.IsEnabled = false;
 
+            List<string> output = new List<string>();
+
+            IEnumerable<string> lst = lvStatements.SelectedItems.Cast<String>();
+            foreach (string item in lst)
+            {
+                foreach (Employee em in empList)
+                {
+                    if (item.Contains(em.FirstName))
+                    {
+                        payrollList.Add(em);
+                    }
+                }
+            }
+
+            var empObject = new CalculatePayroll<Employee>(DateTime.Now, payrollList);
+
+            output.Add(empObject.TotalAll);
+
+            lvStatements.ItemsSource = output;
+
+            lvStatements.SelectionMode = ListViewSelectionMode.Single;
         }
     }
 }
