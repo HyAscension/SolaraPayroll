@@ -29,7 +29,11 @@ namespace PayrollSamePage
                     totalDeductions += emps.IncomeTax(emps.CalculatePay());
                 }
 
-                return $"Payment Date: {payDate}  Employee Count: {totalEmp}  Net Pay: ${Math.Round(totalPay, 2)}  Net Bonus: ${Math.Round(totalBonus, 2)}  Net Deductions: ${Math.Round(totalDeductions, 2)}";
+                string output = $"Payment Date: {payDate}  Employee Count: {totalEmp}  Net Pay: ${Math.Round(totalPay, 2)}  Net Bonus: ${Math.Round(totalBonus, 2)}  Net Deductions: ${Math.Round(totalDeductions, 2)}";
+                eList.Clear();
+
+                return output;
+                
             }
         }
 

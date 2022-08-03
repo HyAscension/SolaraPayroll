@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-02T18:55:49.787</Modified>
+      <Modified>2022-08-03T14:42:57.727</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.exe">
       <PackagePath>entrypoint\PayrollSamePage.exe</PackagePath>
-      <Modified>2022-08-02T18:55:48.956</Modified>
+      <Modified>2022-08-03T14:42:57.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -314,11 +314,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-08-02T18:55:48.862</Modified>
+      <Modified>2022-08-03T14:42:57.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-08-02T18:55:48.862</Modified>
+      <Modified>2022-08-03T14:42:57.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -330,7 +330,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GiaHyMac\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\PayrollSamePage.exe">
       <PackagePath>PayrollSamePage.exe</PackagePath>
-      <Modified>2022-08-02T18:55:49.771</Modified>
+      <Modified>2022-08-03T14:42:57.727</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

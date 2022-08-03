@@ -26,6 +26,7 @@ namespace PayrollSamePage
         private List<Employee> empList = Data.GetDataRecords();
         private List<Employee> payrollList = new List<Employee>();
         private Employee selectedPerson;
+        private List<string> prOutput = new List<string>();
 
         private int ID { get; set; }
         private string EmpName { get; set; }
@@ -59,7 +60,7 @@ namespace PayrollSamePage
 
             btnAddNew.Visibility = Visibility.Collapsed;
 
-            cboEmpType.ItemsSource = new string[] { "", "Hourly", "Salary", "Software Developer", "Supply Manager" };
+            cboEmpType.ItemsSource = new string[] { "Hourly", "Salary", "Software Developer", "Supply Manager" };
             lvEmpList.Items.Clear();
             lvEmpList.ItemsSource = empList;
 
@@ -68,62 +69,39 @@ namespace PayrollSamePage
 
         private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            lvEmpList.Items.Clear();
-            foreach (Employee emp in empList)
+            if (cboEmpType.SelectedItem.ToString() == "Hourly")
             {
-                if (cboEmpType.SelectedItem.ToString() == "Hourly")
-                {
-                    if (emp is Hourly)
-                        lvEmpList.Items.Add(emp.ToString());
-                }
-                else if (cboEmpType.SelectedItem.ToString() == "Salary")
-                {
-                    if (emp is Salary)
-                        lvEmpList.Items.Add(emp.ToString());
-                }
-                else if (cboEmpType.SelectedItem.ToString() == "Software Developer")
-                {
-                    if (emp is SoftwareDev)
-                        lvEmpList.Items.Add(emp.ToString());
-                }
-                else if (cboEmpType.SelectedItem.ToString() == "Supply Manager")
-                {
-                    if (emp is SupplyManager)
-                        lvEmpList.Items.Add(emp.ToString());
-                }
-                else
-                {
-                    lvEmpList.Items.Add(emp.ToString());
-                }
+                lvEmpList.ItemsSource = empList.OfType<Hourly>();
             }
+            if (cboEmpType.SelectedItem.ToString() == "Salary")
+            {
+                lvEmpList.ItemsSource = empList.OfType<Salary>();
+            }
+            if (cboEmpType.SelectedItem.ToString() == "Software Developer")
+            {
+                lvEmpList.ItemsSource = empList.OfType<SoftwareDev>();
+            }
+            if (cboEmpType.SelectedItem.ToString() == "Supply Manager")
+            {
+                lvEmpList.ItemsSource = empList.OfType<SupplyManager>();
+            } 
         }
         
         private void tbxEmpName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            lvEmpList.Items.Clear();
-            foreach (Employee emp in empList)
+            if (tbxEmpName.Text != "")
             {
-                if (tbxEmpName.Text == emp.FirstName || tbxEmpName.Text == emp.LastName)
-                {
-                    lvEmpList.Items.Add(emp.ToString());
-                }
-                else if (tbxEmpName.Text == String.Empty)
-                {
-                    lvEmpList.Items.Add(emp.ToString());
-                }
+                lvEmpList.ItemsSource = empList.Where(p => p.FirstName == tbxEmpName.Text);
+            }
+            else
+            {
+                lvEmpList.ItemsSource = empList;
             }
         }
 
         private void dtpkHiredDate_SelectedDateChanged(DatePicker sender, DatePickerSelectedValueChangedEventArgs args)
         {
-            lvEmpList.Items.Clear();
-            foreach (Employee emp in empList)
-            {
-                if (dtpkHiredDate.Date.Date == emp.HireDate)
-                {
-                    lvEmpList.Items.Add(emp.ToString());
-                }
-            }
+            lvEmpList.ItemsSource = empList.Where(p => p.HireDate == dtpkHiredDate.Date);
         }
 
         private void lvEmpList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -571,8 +549,6 @@ namespace PayrollSamePage
             dtpkPayDate.IsEnabled = false;
             btnPRSubmit.IsEnabled = false;
 
-            List<string> output = new List<string>();
-
             IEnumerable<string> lst = lvStatements.SelectedItems.Cast<String>();
             foreach (string item in lst)
             {
@@ -585,11 +561,11 @@ namespace PayrollSamePage
                 }
             }
 
-            var empObject = new CalculatePayroll<Employee>(DateTime.Now, payrollList);
+            var empObject = new CalculatePayroll<Employee>(dtpkPayDate.Date.Date, payrollList);
 
-            output.Add(empObject.TotalAll);
+            prOutput.Add(empObject.TotalAll);
 
-            lvStatements.ItemsSource = output;
+            lvStatements.ItemsSource = prOutput;
 
             lvStatements.SelectionMode = ListViewSelectionMode.Single;
         }
