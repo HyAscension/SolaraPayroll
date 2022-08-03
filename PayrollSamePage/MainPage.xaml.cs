@@ -67,291 +67,339 @@ namespace PayrollSamePage
             lvStatements.ItemsSource = payrollList;
         }
 
-        private void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cboEmpType.SelectedItem.ToString() == "Hourly")
+            try
             {
-                lvEmpList.ItemsSource = empList.OfType<Hourly>();
+                if (cboEmpType.SelectedItem.ToString() == "Hourly")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<Hourly>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Salary")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<Salary>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Software Developer")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<SoftwareDev>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Supply Manager")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<SupplyManager>();
+                }
             }
-            if (cboEmpType.SelectedItem.ToString() == "Salary")
+            catch (Exception ex)
             {
-                lvEmpList.ItemsSource = empList.OfType<Salary>();
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
             }
-            if (cboEmpType.SelectedItem.ToString() == "Software Developer")
-            {
-                lvEmpList.ItemsSource = empList.OfType<SoftwareDev>();
-            }
-            if (cboEmpType.SelectedItem.ToString() == "Supply Manager")
-            {
-                lvEmpList.ItemsSource = empList.OfType<SupplyManager>();
-            } 
         }
         
-        private void tbxEmpName_TextChanged(object sender, TextChangedEventArgs e)
+        private async void tbxEmpName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (tbxEmpName.Text != "")
+            try
             {
-                lvEmpList.ItemsSource = empList.Where(p => p.FirstName == tbxEmpName.Text);
+                if (tbxEmpName.Text != "")
+                {
+                    lvEmpList.ItemsSource = empList.Where(p => p.FirstName == tbxEmpName.Text);
+                }
+                else
+                {
+                    lvEmpList.ItemsSource = empList;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void dtpkHiredDate_SelectedDateChanged(DatePicker sender, DatePickerSelectedValueChangedEventArgs args)
+        {
+            try
+            {
+                lvEmpList.ItemsSource = empList.Where(p => p.HireDate == dtpkHiredDate.Date);
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void lvEmpList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                cboEmpType.IsEnabled = false;
+                tbxEmpName.IsEnabled = false;
+                dtpkHiredDate.IsEnabled = false;
+                btnCreateNew.IsEnabled = false;
+                lvEmpList.IsEnabled = false;
+
+                txtFirst.IsEnabled = true;
+                txtLast.IsEnabled = true;
+                txtSiN.IsEnabled = true;
+                dtpInputDOB.IsEnabled = true;
+                txtPhone.IsEnabled = true;
+                txtStreet.IsEnabled = true;
+                txtCity.IsEnabled = true;
+                txtProvince.IsEnabled = true;
+                txtZip.IsEnabled = true;
+                txtEmail.IsEnabled = true;
+
+                cboEmployeeType.IsEnabled = true;
+                txtSalary.IsEnabled = true;
+                txtHourWorked.IsEnabled = true;
+                txtHourlyRate.IsEnabled = true;
+                btnUpdate.IsEnabled = true;
+                btnAddNew.IsEnabled = true;
+                btnCancel.IsEnabled = true;
+
+                for (int i = 0; i < lvEmpList.Items.Count; i++)
+                {
+                    if (lvEmpList.SelectedIndex == i)
+                    {
+                        selectedPerson = empList[i];
+                        EmpName = empList[i].FirstName;
+                        //string jsonE = JsonSerializer.Serialize<Employee>(person);
+                        //this.Frame.Navigate(typeof(EditPage), jsonE);
+                        txtFirst.Text = selectedPerson.FirstName;
+                        txtLast.Text = selectedPerson.LastName;
+                        txtSiN.Text = selectedPerson.Sin;
+                        dtpInputDOB.Date = selectedPerson.BirthDate;
+                        txtPhone.Text = selectedPerson.Phone;
+                        txtStreet.Text = selectedPerson.Address.Street;
+                        txtCity.Text = selectedPerson.Address.City;
+                        txtProvince.Text = selectedPerson.Address.Province;
+                        txtZip.Text = selectedPerson.Address.PostalCode;
+                        txtEmail.Text = selectedPerson.Email;
+
+                        if (selectedPerson is Hourly)
+                        {
+                            //set comployee combo box to hourly
+                            cboEmployeeType.SelectedIndex = 0;
+                            //disable some text boxes based on the type of employee
+                            txtSalary.IsEnabled = false;
+                            txtSalary.IsEnabled = false;
+                            //declare a new class type and set
+                            Hourly hourly = (Hourly)selectedPerson;
+                            //set hourly wages and rates to the appropriate text boxes
+                            txtHourWorked.Text = hourly.Hours.ToString();
+                            txtHourlyRate.Text = hourly.Rate.ToString();
+                        }
+                        if (selectedPerson is Salary)
+                        {
+                            //similar things just like in hourly
+                            cboEmployeeType.SelectedIndex = 1;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            Salary salary = (Salary)selectedPerson;
+                            txtSalary.Text = salary.Amount.ToString();
+                        }
+                        if (selectedPerson is SoftwareDev)
+                        {
+                            cboEmployeeType.SelectedIndex = 2;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            SoftwareDev salary = (SoftwareDev)selectedPerson;
+                            txtSalary.Text = salary.Bi_Weekly.ToString();
+                        }
+                        if (selectedPerson is SupplyManager)
+                        {
+                            cboEmployeeType.SelectedIndex = 3;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            SupplyManager salary = (SupplyManager)selectedPerson;
+                            txtSalary.Text = salary.Salary.ToString();
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void btnCreateNew_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                cboEmpType.IsEnabled = false;
+                tbxEmpName.IsEnabled = false;
+                dtpkHiredDate.IsEnabled = false;
+                btnCreateNew.IsEnabled = false;
+                lvEmpList.IsEnabled = false;
+
+                txtFirst.IsEnabled = true;
+                txtLast.IsEnabled = true;
+                txtSiN.IsEnabled = true;
+                dtpInputDOB.IsEnabled = true;
+                txtPhone.IsEnabled = true;
+                txtStreet.IsEnabled = true;
+                txtCity.IsEnabled = true;
+                txtProvince.IsEnabled = true;
+                txtZip.IsEnabled = true;
+                txtEmail.IsEnabled = true;
+
+                cboEmployeeType.IsEnabled = true;
+                txtSalary.IsEnabled = true;
+                txtHourWorked.IsEnabled = true;
+                txtHourlyRate.IsEnabled = true;
+                btnUpdate.IsEnabled = true;
+                btnAddNew.IsEnabled = true;
+                btnCancel.IsEnabled = true;
+
+                txtFirst.Text = "Gia Hy";
+                txtLast.Text = "Vo";
+                txtSiN.Text = "123456789";
+                dtpInputDOB.Date = DateTime.Parse("5/18/2001");
+                txtPhone.Text = "0987654321";
+                txtStreet.Text = "3938 Wellington St";
+                txtCity.Text = "Ottawa";
+                txtProvince.Text = "ON";
+                txtZip.Text = "K1A 0A2";
+                txtEmail.Text = "vogiahy@gmail.com";
+
+                txtSalary.Text = "6800";
+                txtHourWorked.Text = String.Empty;
+                txtHourlyRate.Text = String.Empty;
+
+                btnUpdate.Visibility = Visibility.Collapsed;
+                btnAddNew.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (selectedPerson is Hourly)
+                {
+                    foreach (Hourly emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Hours = int.Parse(txtHourWorked.Text);
+                        emp.Rate = decimal.Parse(txtHourlyRate.Text);
+                    }
+                }
+                if (selectedPerson is Salary)
+                {
+                    foreach (Salary emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Amount = decimal.Parse(txtSalary.Text);
+                    }
+                }
+                if (selectedPerson is SoftwareDev)
+                {
+                    foreach (SoftwareDev emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Bi_Weekly = decimal.Parse(txtSalary.Text);
+                    }
+                }
+                if (selectedPerson is SupplyManager)
+                {
+                    foreach (SupplyManager emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Salary = decimal.Parse(txtSalary.Text);
+                    }
+                }
+                lvEmpList.ItemsSource = null;
                 lvEmpList.ItemsSource = empList;
+
+                cboEmpType.IsEnabled = true;
+                tbxEmpName.IsEnabled = true;
+                dtpkHiredDate.IsEnabled = true;
+                btnCreateNew.IsEnabled = true;
+                lvEmpList.IsEnabled = true;
+
+                txtFirst.IsEnabled = false;
+                txtLast.IsEnabled = false;
+                txtSiN.IsEnabled = false;
+                dtpInputDOB.IsEnabled = false;
+                txtPhone.IsEnabled = false;
+                txtStreet.IsEnabled = false;
+                txtCity.IsEnabled = false;
+                txtProvince.IsEnabled = false;
+                txtZip.IsEnabled = false;
+                txtEmail.IsEnabled = false;
+
+                cboEmployeeType.IsEnabled = false;
+                txtSalary.IsEnabled = false;
+                txtHourWorked.IsEnabled = false;
+                txtHourlyRate.IsEnabled = false;
+                btnUpdate.IsEnabled = false;
+                btnAddNew.IsEnabled = false;
+                btnCancel.IsEnabled = false;
             }
-        }
-
-        private void dtpkHiredDate_SelectedDateChanged(DatePicker sender, DatePickerSelectedValueChangedEventArgs args)
-        {
-            lvEmpList.ItemsSource = empList.Where(p => p.HireDate == dtpkHiredDate.Date);
-        }
-
-        private void lvEmpList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            cboEmpType.IsEnabled = false;
-            tbxEmpName.IsEnabled = false;
-            dtpkHiredDate.IsEnabled = false;
-            btnCreateNew.IsEnabled = false;
-            lvEmpList.IsEnabled = false;
-
-            txtFirst.IsEnabled = true;
-            txtLast.IsEnabled = true;
-            txtSiN.IsEnabled = true;
-            dtpInputDOB.IsEnabled = true;
-            txtPhone.IsEnabled = true;
-            txtStreet.IsEnabled = true;
-            txtCity.IsEnabled = true;
-            txtProvince.IsEnabled = true;
-            txtZip.IsEnabled = true;
-            txtEmail.IsEnabled = true;
-
-            cboEmployeeType.IsEnabled = true;
-            txtSalary.IsEnabled = true;
-            txtHourWorked.IsEnabled = true;
-            txtHourlyRate.IsEnabled = true;
-            btnUpdate.IsEnabled = true;
-            btnAddNew.IsEnabled = true;
-            btnCancel.IsEnabled = true;
-
-            for (int i = 0; i < lvEmpList.Items.Count; i++)
+            catch (Exception ex)
             {
-                if (lvEmpList.SelectedIndex == i)
-                {
-                    selectedPerson = empList[i];
-                    EmpName = empList[i].FirstName;
-                    //string jsonE = JsonSerializer.Serialize<Employee>(person);
-                    //this.Frame.Navigate(typeof(EditPage), jsonE);
-                    txtFirst.Text = selectedPerson.FirstName;
-                    txtLast.Text = selectedPerson.LastName;
-                    txtSiN.Text = selectedPerson.Sin;
-                    dtpInputDOB.Date = selectedPerson.BirthDate;
-                    txtPhone.Text = selectedPerson.Phone;
-                    txtStreet.Text = selectedPerson.Address.Street;
-                    txtCity.Text = selectedPerson.Address.City;
-                    txtProvince.Text = selectedPerson.Address.Province;
-                    txtZip.Text = selectedPerson.Address.PostalCode;
-                    txtEmail.Text = selectedPerson.Email;
-
-                    if (selectedPerson is Hourly)
-                    {
-                        //set comployee combo box to hourly
-                        cboEmployeeType.SelectedIndex = 0;
-                        //disable some text boxes based on the type of employee
-                        txtSalary.IsEnabled = false;
-                        txtSalary.IsEnabled = false;
-                        //declare a new class type and set
-                        Hourly hourly = (Hourly)selectedPerson;
-                        //set hourly wages and rates to the appropriate text boxes
-                        txtHourWorked.Text = hourly.Hours.ToString();
-                        txtHourlyRate.Text = hourly.Rate.ToString();
-                    }
-                    if (selectedPerson is Salary)
-                    {
-                        //similar things just like in hourly
-                        cboEmployeeType.SelectedIndex = 1;
-                        txtHourWorked.IsEnabled = false;
-                        txtHourlyRate.IsEnabled = false;
-                        txtSalary.IsEnabled = true;
-                        Salary salary = (Salary)selectedPerson;
-                        txtSalary.Text = salary.Amount.ToString();
-                    }
-                    if (selectedPerson is SoftwareDev)
-                    {
-                        cboEmployeeType.SelectedIndex = 2;
-                        txtHourWorked.IsEnabled = false;
-                        txtHourlyRate.IsEnabled = false;
-                        txtSalary.IsEnabled = true;
-                        SoftwareDev salary = (SoftwareDev)selectedPerson;
-                        txtSalary.Text = salary.Bi_Weekly.ToString();
-                    }
-                    if (selectedPerson is SupplyManager)
-                    {
-                        cboEmployeeType.SelectedIndex = 3;
-                        txtHourWorked.IsEnabled = false;
-                        txtHourlyRate.IsEnabled = false;
-                        txtSalary.IsEnabled = true;
-                        SupplyManager salary = (SupplyManager)selectedPerson;
-                        txtSalary.Text = salary.Salary.ToString();
-                    }
-
-                }
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
             }
-        }
-
-        private void btnCreateNew_Click(object sender, RoutedEventArgs e)
-        {
-            cboEmpType.IsEnabled = false;
-            tbxEmpName.IsEnabled = false;
-            dtpkHiredDate.IsEnabled = false;
-            btnCreateNew.IsEnabled = false;
-            lvEmpList.IsEnabled = false;
-
-            txtFirst.IsEnabled = true;
-            txtLast.IsEnabled = true;
-            txtSiN.IsEnabled = true;
-            dtpInputDOB.IsEnabled = true;
-            txtPhone.IsEnabled = true;
-            txtStreet.IsEnabled = true;
-            txtCity.IsEnabled = true;
-            txtProvince.IsEnabled = true;
-            txtZip.IsEnabled = true;
-            txtEmail.IsEnabled = true;
-
-            cboEmployeeType.IsEnabled = true;
-            txtSalary.IsEnabled = true;
-            txtHourWorked.IsEnabled = true;
-            txtHourlyRate.IsEnabled = true;
-            btnUpdate.IsEnabled = true;
-            btnAddNew.IsEnabled = true;
-            btnCancel.IsEnabled = true;
-
-            txtFirst.Text = "Gia Hy";
-            txtLast.Text = "Vo";
-            txtSiN.Text = "123456789";
-            dtpInputDOB.Date = DateTime.Parse("5/18/2001");
-            txtPhone.Text = "0987654321";
-            txtStreet.Text = "3938 Wellington St";
-            txtCity.Text = "Ottawa";
-            txtProvince.Text = "ON";
-            txtZip.Text = "K1A 0A2";
-            txtEmail.Text = "vogiahy@gmail.com";
-
-            txtSalary.Text = "6800";
-            txtHourWorked.Text = String.Empty;
-            txtHourlyRate.Text = String.Empty;
-
-            btnUpdate.Visibility = Visibility.Collapsed;
-            btnAddNew.Visibility = Visibility.Visible;
-        }
-
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
-        {
-            if (selectedPerson is Hourly)
-            {
-                foreach (Hourly emp in empList.Where(p => p.FirstName == EmpName))
-                {
-                    emp.FirstName = txtFirst.Text;
-                    emp.LastName = txtLast.Text;
-                    emp.Sin = txtSiN.Text;
-                    emp.BirthDate = dtpInputDOB.Date.Date;
-                    emp.Phone = txtPhone.Text;
-                    emp.Address = new Address
-                    {
-                        Street = txtStreet.Text,
-                        City = txtCity.Text,
-                        Province = txtProvince.Text,
-                        PostalCode = txtZip.Text
-                    };
-                    emp.Email = txtEmail.Text;
-                    emp.Hours = int.Parse(txtHourWorked.Text);
-                    emp.Rate = decimal.Parse(txtHourlyRate.Text);
-                }
-            }
-            if (selectedPerson is Salary)
-            {
-                foreach (Salary emp in empList.Where(p => p.FirstName == EmpName))
-                {
-                    emp.FirstName = txtFirst.Text;
-                    emp.LastName = txtLast.Text;
-                    emp.Sin = txtSiN.Text;
-                    emp.BirthDate = dtpInputDOB.Date.Date;
-                    emp.Phone = txtPhone.Text;
-                    emp.Address = new Address
-                    {
-                        Street = txtStreet.Text,
-                        City = txtCity.Text,
-                        Province = txtProvince.Text,
-                        PostalCode = txtZip.Text
-                    };
-                    emp.Email = txtEmail.Text;
-                    emp.Amount = decimal.Parse(txtSalary.Text);
-                }
-            }
-            if (selectedPerson is SoftwareDev)
-            {
-                foreach (SoftwareDev emp in empList.Where(p => p.FirstName == EmpName))
-                {
-                    emp.FirstName = txtFirst.Text;
-                    emp.LastName = txtLast.Text;
-                    emp.Sin = txtSiN.Text;
-                    emp.BirthDate = dtpInputDOB.Date.Date;
-                    emp.Phone = txtPhone.Text;
-                    emp.Address = new Address
-                    {
-                        Street = txtStreet.Text,
-                        City = txtCity.Text,
-                        Province = txtProvince.Text,
-                        PostalCode = txtZip.Text
-                    };
-                    emp.Email = txtEmail.Text;
-                    emp.Bi_Weekly = decimal.Parse(txtSalary.Text);
-                }
-            }
-            if (selectedPerson is SupplyManager)
-            {
-                foreach (SupplyManager emp in empList.Where(p => p.FirstName == EmpName))
-                {
-                    emp.FirstName = txtFirst.Text;
-                    emp.LastName = txtLast.Text;
-                    emp.Sin = txtSiN.Text;
-                    emp.BirthDate = dtpInputDOB.Date.Date;
-                    emp.Phone = txtPhone.Text;
-                    emp.Address = new Address
-                    {
-                        Street = txtStreet.Text,
-                        City = txtCity.Text,
-                        Province = txtProvince.Text,
-                        PostalCode = txtZip.Text
-                    };
-                    emp.Email = txtEmail.Text;
-                    emp.Salary = decimal.Parse(txtSalary.Text);
-                }
-            }
-            lvEmpList.ItemsSource = null;
-            lvEmpList.ItemsSource = empList;
-
-            cboEmpType.IsEnabled = true;
-            tbxEmpName.IsEnabled = true;
-            dtpkHiredDate.IsEnabled = true;
-            btnCreateNew.IsEnabled = true;
-            lvEmpList.IsEnabled = true;
-
-            txtFirst.IsEnabled = false;
-            txtLast.IsEnabled = false;
-            txtSiN.IsEnabled = false;
-            dtpInputDOB.IsEnabled = false;
-            txtPhone.IsEnabled = false;
-            txtStreet.IsEnabled = false;
-            txtCity.IsEnabled = false;
-            txtProvince.IsEnabled = false;
-            txtZip.IsEnabled = false;
-            txtEmail.IsEnabled = false;
-
-            cboEmployeeType.IsEnabled = false;
-            txtSalary.IsEnabled = false;
-            txtHourWorked.IsEnabled = false;
-            txtHourlyRate.IsEnabled = false;
-            btnUpdate.IsEnabled = false;
-            btnAddNew.IsEnabled = false;
-            btnCancel.IsEnabled = false;
         }
 
         private async void btnAddNew_Click(object sender, RoutedEventArgs e)
@@ -471,103 +519,135 @@ namespace PayrollSamePage
             }
         }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        private async void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            lvEmpList.SelectedIndex = -1;
-
-            cboEmpType.IsEnabled = true;
-            tbxEmpName.IsEnabled = true;
-            dtpkHiredDate.IsEnabled = true;
-            btnCreateNew.IsEnabled = true;
-            lvEmpList.IsEnabled = true;
-
-            txtFirst.IsEnabled = false;
-            txtLast.IsEnabled = false;
-            txtSiN.IsEnabled = false;
-            dtpInputDOB.IsEnabled = false;
-            txtPhone.IsEnabled = false;
-            txtStreet.IsEnabled = false;
-            txtCity.IsEnabled = false;
-            txtProvince.IsEnabled = false;
-            txtZip.IsEnabled = false;
-            txtEmail.IsEnabled = false;
-
-            cboEmployeeType.IsEnabled = false;
-            txtSalary.IsEnabled = false;
-            txtHourWorked.IsEnabled = false;
-            txtHourlyRate.IsEnabled = false;
-            btnUpdate.IsEnabled = false;
-            btnAddNew.IsEnabled = false;
-            btnCancel.IsEnabled = false;
-        }
-
-        private void cboEmployeeType_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //disable text boxes based on the selected employee type
-            switch (cboEmployeeType.SelectedIndex)
+            try
             {
-                case 0:
-                    txtHourWorked.IsEnabled = true;
-                    txtHourlyRate.IsEnabled = true;
-                    txtSalary.IsEnabled = false;
-                    break;
-                case 1:
-                    txtHourWorked.IsEnabled = false;
-                    txtHourlyRate.IsEnabled = false;
-                    txtSalary.IsEnabled = true;
-                    break;
-                case 2:
-                    txtHourWorked.IsEnabled = false;
-                    txtHourlyRate.IsEnabled = false;
-                    txtSalary.IsEnabled = true;
-                    break;
-                case 3:
-                    txtHourWorked.IsEnabled = false;
-                    txtHourlyRate.IsEnabled = false;
-                    txtSalary.IsEnabled = true;
-                    break;
-                default:
-                    throw new Exception("Please pick a type of employee.");
+                lvEmpList.SelectedIndex = -1;
+
+                cboEmpType.IsEnabled = true;
+                tbxEmpName.IsEnabled = true;
+                dtpkHiredDate.IsEnabled = true;
+                btnCreateNew.IsEnabled = true;
+                lvEmpList.IsEnabled = true;
+
+                txtFirst.IsEnabled = false;
+                txtLast.IsEnabled = false;
+                txtSiN.IsEnabled = false;
+                dtpInputDOB.IsEnabled = false;
+                txtPhone.IsEnabled = false;
+                txtStreet.IsEnabled = false;
+                txtCity.IsEnabled = false;
+                txtProvince.IsEnabled = false;
+                txtZip.IsEnabled = false;
+                txtEmail.IsEnabled = false;
+
+                cboEmployeeType.IsEnabled = false;
+                txtSalary.IsEnabled = false;
+                txtHourWorked.IsEnabled = false;
+                txtHourlyRate.IsEnabled = false;
+                btnUpdate.IsEnabled = false;
+                btnAddNew.IsEnabled = false;
+                btnCancel.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
             }
         }
 
-        private void btnNewpayroll_Click(object sender, RoutedEventArgs e)
+        private async void cboEmployeeType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            btnNewpayroll.IsEnabled = false;
-            dtpkPayDate.IsEnabled = true;
-            btnPRSubmit.IsEnabled = true;
-            var empObject = new CalculatePayroll<Employee>(DateTime.Now, empList);
-            List<string> prEmpList = new List<string>();
-            prEmpList = empObject.ProcessPayRoll();
-            lvStatements.ItemsSource = prEmpList;
-            lvStatements.SelectionMode = ListViewSelectionMode.Multiple;
-        }
-
-        private void btnPRSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            btnNewpayroll.IsEnabled = true;
-            dtpkPayDate.IsEnabled = false;
-            btnPRSubmit.IsEnabled = false;
-
-            IEnumerable<string> lst = lvStatements.SelectedItems.Cast<String>();
-            foreach (string item in lst)
+            try
             {
-                foreach (Employee em in empList)
+                //disable text boxes based on the selected employee type
+                switch (cboEmployeeType.SelectedIndex)
                 {
-                    if (item.Contains(em.FirstName))
-                    {
-                        payrollList.Add(em);
-                    }
+                    case 0:
+                        txtHourWorked.IsEnabled = true;
+                        txtHourlyRate.IsEnabled = true;
+                        txtSalary.IsEnabled = false;
+                        break;
+                    case 1:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    case 2:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    case 3:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    default:
+                        throw new Exception("Please pick a type of employee.");
                 }
             }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
 
-            var empObject = new CalculatePayroll<Employee>(dtpkPayDate.Date.Date, payrollList);
+        private async void btnNewpayroll_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                btnNewpayroll.IsEnabled = false;
+                dtpkPayDate.IsEnabled = true;
+                btnPRSubmit.IsEnabled = true;
+                var empObject = new CalculatePayroll<Employee>(DateTime.Now, empList);
+                List<string> prEmpList = new List<string>();
+                prEmpList = empObject.ProcessPayRoll();
+                lvStatements.ItemsSource = prEmpList;
+                lvStatements.SelectionMode = ListViewSelectionMode.Multiple;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
 
-            prOutput.Add(empObject.TotalAll);
+        private async void btnPRSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                btnNewpayroll.IsEnabled = true;
+                dtpkPayDate.IsEnabled = false;
+                btnPRSubmit.IsEnabled = false;
 
-            lvStatements.ItemsSource = prOutput;
+                IEnumerable<string> lst = lvStatements.SelectedItems.Cast<String>();
+                foreach (string item in lst)
+                {
+                    foreach (Employee em in empList)
+                    {
+                        if (item.Contains(em.FirstName))
+                        {
+                            payrollList.Add(em);
+                        }
+                    }
+                }
 
-            lvStatements.SelectionMode = ListViewSelectionMode.Single;
+                var empObject = new CalculatePayroll<Employee>(dtpkPayDate.Date.Date, payrollList);
+
+                prOutput.Add(empObject.TotalAll);
+
+                lvStatements.ItemsSource = prOutput;
+
+                lvStatements.SelectionMode = ListViewSelectionMode.Single;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
         }
     }
 }

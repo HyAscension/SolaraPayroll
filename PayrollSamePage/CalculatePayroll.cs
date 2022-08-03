@@ -8,10 +8,11 @@ using BusinessLogic;
 namespace PayrollSamePage
 {
     public class CalculatePayroll<T>
+        where T : Employee
     {
-        private List<Employee> eList = new List<Employee>();
-
         private DateTime payDate;
+
+        private List<T> eList = new List<T>();
 
         public string TotalAll
         {
@@ -21,7 +22,7 @@ namespace PayrollSamePage
                 decimal totalPay = 0;
                 decimal totalBonus = 0;
                 decimal totalDeductions = 0;
-                foreach (Employee emps in eList)
+                foreach (T emps in eList)
                 {
                     totalEmp++;
                     totalPay += emps.CalculatePay();
@@ -37,7 +38,7 @@ namespace PayrollSamePage
             }
         }
 
-        public CalculatePayroll(DateTime current, List<Employee> emps)
+        public CalculatePayroll(DateTime current, List<T> emps)
         {
             payDate = current;
             eList = emps;
@@ -46,7 +47,7 @@ namespace PayrollSamePage
         public List<string> ProcessPayRoll()
         {
             List<string> fullInfo = new List<string>();
-            foreach (Employee emps in eList)
+            foreach (T emps in eList)
             {
                 fullInfo.Add($"{emps.Sin} {emps.FirstName} {emps.LastName} - Net: ${Math.Round(emps.CalculatePay(), 2)} - Bonus: ${Math.Round(emps.Bonus(), 2)} - Deductions: ${Math.Round(emps.IncomeTax(emps.CalculatePay()), 2)}");
             }
