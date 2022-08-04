@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-03T17:36:14.714</Modified>
+      <Modified>2022-08-04T16:36:03.029</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.exe">
       <PackagePath>entrypoint\PayrollSamePage.exe</PackagePath>
-      <Modified>2022-08-03T17:36:14.183</Modified>
+      <Modified>2022-08-04T16:36:01.939</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\Employee\bin\Debug\BusinessLogic.dll">
       <PackagePath>BusinessLogic.dll</PackagePath>
-      <Modified>2022-08-03T16:33:48.479</Modified>
+      <Modified>2022-08-04T16:27:14.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -314,11 +314,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-08-03T17:36:14.074</Modified>
+      <Modified>2022-08-04T16:36:01.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-08-03T17:36:14.074</Modified>
+      <Modified>2022-08-04T16:36:01.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -326,11 +326,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-08-03T16:53:16.495</Modified>
+      <Modified>2022-08-04T16:36:02.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\PayrollSamePage.exe">
       <PackagePath>PayrollSamePage.exe</PackagePath>
-      <Modified>2022-08-03T17:36:14.714</Modified>
+      <Modified>2022-08-04T16:36:03.021</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
