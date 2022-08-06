@@ -39,36 +39,12 @@ namespace BusinessLogic
         public DateTime HireDate
         {
             get => hired;
-            set
-            {
-                var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
-                string readHireDate = value.ToString();
-                DateTime outputDate;
-                bool validDate = DateTime.TryParseExact(
-                    readHireDate,
-                    dateFormats,
-                    DateTimeFormatInfo.InvariantInfo,
-                    DateTimeStyles.None,
-                    out outputDate);
-                hired = validDate? value: DateTime.MinValue;
-            }
+            set => hired = value;
         }
         public DateTime BirthDate
         {
             get => birth;
-            set
-            {
-                var dateFormats = new[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" };
-                string readHireDate = value.ToString();
-                DateTime outputDate;
-                bool validDate = DateTime.TryParseExact(
-                    readHireDate,
-                    dateFormats,
-                    DateTimeFormatInfo.InvariantInfo,
-                    DateTimeStyles.None,
-                    out outputDate);
-                birth = validDate ? value : DateTime.MinValue;
-            }
+            set => birth = value;
         }
         public string Email
         {
@@ -100,7 +76,7 @@ namespace BusinessLogic
             LastName = l;
         }
 
-        public override string ToString() => $"FullName: {FirstName} {LastName}. Phone: {Phone}";
+        public override string ToString() => $"FullName: {FirstName} {LastName}. Phone: {Phone}. Birth date: {BirthDate.ToShortDateString()}";
 
         public virtual decimal Bonus() => 0;
 

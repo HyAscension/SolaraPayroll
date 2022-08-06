@@ -114,7 +114,7 @@ namespace PayrollSamePage
         {
             try
             {
-                lvEmpList.ItemsSource = empList.Where(p => p.HireDate == dtpkHiredDate.Date);
+                lvEmpList.ItemsSource = empList.Where(p => p.HireDate.Date.Date == dtpkHiredDate.Date.Date);
             }
             catch (Exception ex)
             {

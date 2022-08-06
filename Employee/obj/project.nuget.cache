@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "VeIWTi+JFTCGoYQdVHQgV4zmCopGnYCSYo60aoVh6M3v4UJtOT/kAIG4HtdA6ENKyoVbXmAA7iWEI14tDgnQIA==",
+  "dgSpecHash": "amCZX3xgW3D6qfy19elFk7W1d9x9FSfZbo6dnfB7HiZ0qUkQyld10jpzbjOAshCiKFNrOYfVHaSJb7K0fihRFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GIAHY-MAC\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\vogia\\Documents\\GitHub\\SolaraPayroll\\Employee\\BusinessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.11-rel-30601-02\\microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.13\\microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.13\\microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.13\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.11-rel-30601-02\\runtime.win10-arm.microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.sharedlibrary\\2.2.8-rel-30601-02\\runtime.win10-arm.microsoft.net.native.sharedlibrary.2.2.8-rel-30601-02.nupkg.sha512",

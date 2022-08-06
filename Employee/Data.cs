@@ -19,7 +19,7 @@ namespace BusinessLogic
         public static List<Employee> GetDataRecords()
         {
             Hourly hourly = new Hourly("977993106", "Keelan", "North", 18, 40);
-            hourly.HireDate = DateTime.Parse("2021-08-05");
+            hourly.HireDate = DateTime.Parse("2022-08-05");
             hourly.BirthDate = DateTime.Parse("1980-12-13");
             hourly.Phone = "6159985792";
             hourly.Address = new Address{

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-CJMT53S</Machine>
-    <WindowsUser>GIAHY-MAC</WindowsUser>
+    <Machine>GIA-HY</Machine>
+    <WindowsUser>vogia</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,255 +10,255 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>cc6148b2-3858-43e1-8f27-619eb5e8ab76</PackageIdentityName>
     <PackageIdentityPublisher>CN=GiaHyMac</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.exe">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.exe">
       <PackagePath>entrypoint\PayrollSamePage.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\Employee\bin\Debug\BusinessLogic.dll">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\Employee\bin\Debug\BusinessLogic.dll">
       <PackagePath>BusinessLogic.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.xr.xml">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\PayrollSamePage.xr.xml">
       <PackagePath>PayrollSamePage.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\PayrollSamePage.exe">
+    <AppxPackagedFile Include="C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollSamePage\bin\x64\Debug\Core\PayrollSamePage.exe">
       <PackagePath>PayrollSamePage.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
