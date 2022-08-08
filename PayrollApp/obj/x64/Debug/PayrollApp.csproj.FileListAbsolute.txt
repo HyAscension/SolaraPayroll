@@ -161,8 +161,6 @@ C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\Syste
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\System.Text.Json.dll
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\BusinessLogic.dll
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\BusinessLogic.pdb
-C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\bin\x64\Debug\BusinessLogic.pri
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\PayrollApp.csproj.AssemblyReference.cache
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\App.g.i.cs
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\App.g.cs
@@ -188,7 +186,6 @@ C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\NewPa
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\PayrollApp.csproj.CoreCompileInputs.cache
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\PayrollApp.csproj.CopyComplete
-C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\BusinessLogic.pri.xml
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\PayrollApp.exe
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\PayrollApp.pdb
 C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollApp\obj\x64\Debug\ResourceHandlingTask.state

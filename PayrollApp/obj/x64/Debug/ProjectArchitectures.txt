@@ -1,1 +1,0 @@
-C:\Users\vogia\Documents\GitHub\SolaraPayroll\PayrollApp\PayrollApp.csproj;x64

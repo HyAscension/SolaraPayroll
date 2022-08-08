@@ -71,6 +71,13 @@
                     <DatePicker x:Name="dtpkPayDate" Margin="10,54,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>
+            <PivotItem Header="Filters">
+                <Grid>
+                    <ComboBox x:Name="cboFilterOptions" Margin="10,54,0,0" Width="200" SelectionChanged="cboFilterOptions_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Filter by Employee" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+                    <ListView x:Name="lvFilterOutput" Margin="0,120,0,0" Background="White" Grid.ColumnSpan="2" SelectionChanged="lvFilterOutput_SelectionChanged"/>
+                </Grid>
+            </PivotItem>
         </Pivot>
     </Grid>
 </Page>

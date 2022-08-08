@@ -29,6 +29,7 @@ namespace BusinessLogic
                 PostalCode = "94404"
             };
             hourly.Email = "randomperson@gmail.com";
+            hourly.Active = true;
             employee.Add(hourly);                               //add object with data into list
                                                                 //repeat with the rest
 
@@ -50,6 +51,7 @@ namespace BusinessLogic
                 PostalCode = "94404"
             };
             salary.Email = "randomperson@gmail.com";
+            salary.Active = true;
             employee.Add(salary);
 
             //employee.Add(new Supervisor("587537913", "Coen", "Romero", DateTime.Parse("2021-11-02"), DateTime.Parse("1994-03-09"), "6493356864", "391 Foster City Blvd, Foster City, CA 94404, United States", "randomperson@gmail.com", 96000));
@@ -72,6 +74,7 @@ namespace BusinessLogic
                 PostalCode = "94404"
             };
             softwareDev.Email = "randomperson@gmail.com";
+            softwareDev.Active = true;
             employee.Add(softwareDev);
 
             //employee.Add(new EngineeringManager("674581538", "Kara", "Fellows", DateTime.Parse("2021-11-22"), DateTime.Parse("1982-01-14"), "9012636916", "391 Foster City Blvd, Foster City, CA 94404, United States", "randomperson@gmail.com", 93000, 7750));
@@ -94,6 +97,7 @@ namespace BusinessLogic
                 PostalCode = "94404"
             };
             gsm.Email = "randomperson@gmail.com";
+            gsm.Active = false;
             employee.Add(gsm);
 
             //employee.Add(new GlobalSupplyManager("258004520", "Huw", "Coombes", DateTime.Parse("2021 -10-25"), DateTime.Parse("1995-08-25"), "7740739086", "391 Foster City Blvd, Foster City, CA 94404, United States", "randomperson@gmail.com", 67000));

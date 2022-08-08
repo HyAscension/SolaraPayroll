@@ -59,6 +59,17 @@ namespace PayrollSamePage
             }
 
             lvStatements.ItemsSource = payrollList;
+
+            cboFilterOptions.ItemsSource = new string[]
+            {
+                "Employee Types",
+                "Activities",
+                "Seniority",
+                "Highest Pay",
+                "Highest Pay Type",
+                "Average Pay",
+                "Highest Bonus"
+            };
         }
 
         private async void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -724,6 +735,133 @@ namespace PayrollSamePage
                 var message = new MessageDialog(ex.Message);
                 await message.ShowAsync();
             }
+        }
+
+        private void cboFilterOptions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (cboFilterOptions.SelectedIndex)
+            {
+                case 0:
+                    var outputList = new List<string>();
+
+                    var hourlyType =
+                        from emp in empList
+                        where emp is Hourly
+                        select emp;
+                    outputList.Add($"Hourly Employee: {hourlyType.Count()}");
+
+                    var salaryType =
+                        from emp in empList
+                        where emp is Salary
+                        select emp;
+                    outputList.Add($"Salary Employee: {salaryType.Count()}");
+
+                    var sdType =
+                        from emp in empList
+                        where emp is SoftwareDev
+                        select emp;
+                    outputList.Add($"Software Developer Employee: {sdType.Count()}");
+
+                    var smType =
+                        from emp in empList
+                        where emp is SupplyManager
+                        select emp;
+                    outputList.Add($"Supply Manager Employee: {smType.Count()}");
+
+                    lvFilterOutput.ItemsSource = outputList;
+                    break;
+
+                case 1:
+                    var activeList = new List<string>();
+                    var active =
+                        from emp in empList
+                        where emp.Active = true
+                        select emp;
+                    activeList.Add($"Active: {active.Count()}");
+                    activeList.Add($"Inactive: {empList.Count() - active.Count()}");
+
+                    lvFilterOutput.ItemsSource = activeList;
+                    break;
+
+                case 2:
+                    var seniorList = new List<string>();
+                    var senior =
+                        from emp in empList
+                        orderby emp.HireDate ascending
+                        select $"Name: {emp.FirstName} {emp.LastName} | Type: {emp.GetType().Name} | Pay: ${emp.CalculatePay()} | Days Worked: {(DateTime.Today - emp.HireDate).Days} days";
+                    
+                    foreach (var emp in senior)
+                    {
+                        seniorList.Add(emp);
+                    }
+                    lvFilterOutput.ItemsSource = seniorList;
+                    break;
+
+                case 3:
+                    var finalOutput = new List<string>();
+                    var highestPay =
+                        from emp in empList
+                        select emp.CalculatePay();
+
+                    finalOutput.Add("$" + highestPay.Max().ToString());
+                    lvFilterOutput.ItemsSource = finalOutput;
+                    break;
+
+                case 4:
+                    var outputMax = new List<decimal>();
+
+                    var hourlyPay =
+                        from emp in empList
+                        where emp is Hourly
+                        select emp.CalculatePay();
+                    outputMax.Add(hourlyPay.Max());
+
+                    var salaryPay =
+                        from emp in empList
+                        where emp is Salary
+                        select emp.CalculatePay();
+                    outputMax.Add(salaryPay.Max());
+
+                    var sdPay =
+                        from emp in empList
+                        where emp is SoftwareDev
+                        select emp.CalculatePay();
+                    outputMax.Add(sdPay.Max());
+
+                    var smPay =
+                        from emp in empList
+                        where emp is SupplyManager
+                        select emp.CalculatePay();
+                    outputMax.Add(smPay.Max());
+
+                    lvFilterOutput.Items.Clear();
+                    lvFilterOutput.Items.Add("$" + outputMax.Max());
+                    break;
+
+                case 5:
+                    //var avgOutput = new List<string>();
+                    var avg =
+                        from emp in empList
+                        select emp.CalculatePay();
+
+                    lvFilterOutput.Items.Clear();
+                    lvFilterOutput.Items.Add("$" + avg.Average());
+                    break;
+
+                case 6:
+                    var bonus =
+                        from emp in empList
+                        select emp.Bonus();
+
+                    lvFilterOutput.Items.Clear();
+                    lvFilterOutput.Items.Add("$" + bonus.Max());
+                    break;
+            }
+        }
+
+        private void lvFilterOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

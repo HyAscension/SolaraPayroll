@@ -19,6 +19,7 @@ namespace BusinessLogic
         private Address address;
         private bool status;
 
+
         public const string companyName = "Solara";
 
         public string Sin
