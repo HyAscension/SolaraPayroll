@@ -1,1 +1,0 @@
-C:\Users\GIAHY-MAC\Documents\GitHub\SolaraPayroll\PayrollSamePage\PayrollSamePage.csproj;x64

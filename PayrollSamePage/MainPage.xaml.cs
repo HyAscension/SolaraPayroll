@@ -17,9 +17,12 @@ namespace PayrollSamePage
 
         List<string> tempEmpList = new List<string>();
 
-        private List<Employee> tempList = new List<Employee>();
-
         private string EmpName { get; set; }
+
+        public static string ReminderMethod(string message)
+        {
+            return message;
+        }
 
         public MainPage()
         {
@@ -70,6 +73,7 @@ namespace PayrollSamePage
                 "Average Pay",
                 "Highest Bonus"
             };
+
         }
 
         private async void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -410,6 +414,7 @@ namespace PayrollSamePage
                             PostalCode = txtZip.Text
                         };
                         emp.Email = txtEmail.Text;
+                        //emp.Amount += HandleNotify();
                         emp.Amount = decimal.Parse(txtSalary.Text);
                     }
                 }
@@ -756,11 +761,11 @@ namespace PayrollSamePage
                         select emp;
                     outputList.Add($"Salary Employee: {salaryType.Count()}");
 
-                    var sdType =
-                        from emp in empList
-                        where emp is SoftwareDev
-                        select emp;
-                    outputList.Add($"Software Developer Employee: {sdType.Count()}");
+                    //var sdType =
+                    //    from emp in empList
+                    //    where emp is SoftwareDev
+                    //    select emp;
+                    //outputList.Add($"Software Developer Employee: {sdType.Count()}");
 
                     var smType =
                         from emp in empList
@@ -798,44 +803,81 @@ namespace PayrollSamePage
                     break;
 
                 case 3:
-                    var finalOutput = new List<string>();
-                    var highestPay =
+                    var highestPayList =
                         from emp in empList
-                        select emp.CalculatePay();
+                        select new
+                        {
+                            Key = emp.FirstName,
+                            Value = emp.CalculatePay()
+                        };
 
-                    finalOutput.Add("$" + highestPay.Max().ToString());
-                    lvFilterOutput.ItemsSource = finalOutput;
+                    Dictionary<string, decimal> combinedList = highestPayList.ToDictionary(s => s.Key, d => d.Value);
+
+                    List<string> output = new List<string>();
+                    var pay = combinedList.Max(d => d.Value);
+                    var eName = combinedList.FirstOrDefault(s => s.Value == pay).Key;
+                    var eType = empList.FirstOrDefault(t => t.FirstName == eName).GetType().Name;
+                    output.Add($"Employee: {eName} | Type: {eType} | Net Pay: ${pay}");
+                    lvFilterOutput.ItemsSource = output;
+
                     break;
 
                 case 4:
-                    var outputMax = new List<decimal>();
-
-                    var hourlyPay =
+                    var hourlyPayList =
                         from emp in empList
                         where emp is Hourly
-                        select emp.CalculatePay();
-                    outputMax.Add(hourlyPay.Max());
+                        select new
+                        {
+                            Key = emp.GetType().Name,
+                            Value = emp.CalculatePay()
+                        };
+                    var sumEachHourly = hourlyPayList.Sum(d => d.Value);
+                    var keyTypeH = hourlyPayList.FirstOrDefault().Key;
 
-                    var salaryPay =
+                    var salaryPayList =
                         from emp in empList
                         where emp is Salary
-                        select emp.CalculatePay();
-                    outputMax.Add(salaryPay.Max());
+                        select new
+                        {
+                            Key = emp.GetType().Name,
+                            Value = emp.CalculatePay()
+                        };
+                    var sumEachSalary = salaryPayList.Sum(d => d.Value);
+                    var keyTypeS = salaryPayList.FirstOrDefault().Key;
 
-                    var sdPay =
-                        from emp in empList
-                        where emp is SoftwareDev
-                        select emp.CalculatePay();
-                    outputMax.Add(sdPay.Max());
+                    //var sdPayList =
+                    //    from emp in empList
+                    //    where emp is SoftwareDev
+                    //    select new
+                    //    {
+                    //        Key = emp.GetType().Name,
+                    //        Value = emp.CalculatePay()
+                    //    };
 
-                    var smPay =
+                    var smPayList =
                         from emp in empList
                         where emp is SupplyManager
-                        select emp.CalculatePay();
-                    outputMax.Add(smPay.Max());
+                        select new
+                        {
+                            Key = emp.GetType().Name,
+                            Value = emp.CalculatePay()
+                        };
+                    var sumEachSupplier = smPayList.Sum(d => d.Value);
+                    var keyTypeSup = smPayList.FirstOrDefault().Key;
 
-                    lvFilterOutput.Items.Clear();
-                    lvFilterOutput.Items.Add("$" + outputMax.Max());
+                    Dictionary<string, decimal> output2 = new Dictionary<string, decimal>();
+
+                    output2.Add(keyTypeH, sumEachHourly);
+                    output2.Add(keyTypeS, sumEachSalary);
+                    output2.Add(keyTypeSup, sumEachSupplier);
+
+                    var outputSum = output2.Max(d => d.Value);
+                    var outputKey = output2.FirstOrDefault(k => k.Value == outputSum).Key;
+
+                    var outputSumResult = new List<string>();
+                    outputSumResult.Add($"Employee Type: {outputKey} | Net Pay: ${outputSum}");
+
+                    lvFilterOutput.ItemsSource = outputSumResult;
                     break;
 
                 case 5:
@@ -845,16 +887,23 @@ namespace PayrollSamePage
                         select emp.CalculatePay();
 
                     lvFilterOutput.Items.Clear();
-                    lvFilterOutput.Items.Add("$" + avg.Average());
+                    lvFilterOutput.Items.Add($"All Employees' Net Pay Average: ${Math.Round(avg.Average())}");
                     break;
 
                 case 6:
                     var bonus =
                         from emp in empList
-                        select emp.Bonus();
+                        select new
+                        {
+                            Key = emp.FirstName,
+                            Value = emp.Bonus()
+                        };
+
+                    var bonusMax = bonus.Max(m => m.Value);
+                    var bmName = bonus.FirstOrDefault(em => em.Value == bonusMax).Key;
 
                     lvFilterOutput.Items.Clear();
-                    lvFilterOutput.Items.Add("$" + bonus.Max());
+                    lvFilterOutput.Items.Add($"Employee: {bmName} | Net Bonus: ${Math.Round(bonusMax, 2)}");
                     break;
             }
         }
@@ -862,6 +911,12 @@ namespace PayrollSamePage
         private void lvFilterOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        public async void HandleNotify(object sender, EventArgs args)
+        {
+            var message = new MessageDialog("Update: One or more employee have a salary greater than $215,000");
+            await message.ShowAsync();
         }
     }
 }

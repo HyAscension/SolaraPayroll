@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace BusinessLogic
 {
@@ -21,6 +22,10 @@ namespace BusinessLogic
 
 
         public const string companyName = "Solara";
+
+        public delegate void HighWage(object sender, EventArgs args);
+
+        public event HighWage highWage;
 
         public string Sin
         {
@@ -100,6 +105,7 @@ namespace BusinessLogic
             }
             else if (income > 215000)
             {
+                highWage.Invoke(this, EventArgs.Empty);
                 return income * 0.3m;
             }
             else
