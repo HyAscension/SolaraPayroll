@@ -8,6 +8,8 @@ using Windows.UI.Popups;
 
 namespace BusinessLogic
 {
+    public delegate void HighSalary(object sender, EventArgs args);
+
     public abstract class Employee : IDeduction
     {
         private string sin;
@@ -20,12 +22,9 @@ namespace BusinessLogic
         private Address address;
         private bool status;
 
-
         public const string companyName = "Solara";
 
-        public delegate void HighWage(object sender, EventArgs args);
-
-        public event HighWage highWage;
+        public event HighSalary HSAlert;
 
         public string Sin
         {
@@ -105,7 +104,7 @@ namespace BusinessLogic
             }
             else if (income > 215000)
             {
-                highWage.Invoke(this, EventArgs.Empty);
+                HSAlert?.Invoke(this, EventArgs.Empty);
                 return income * 0.3m;
             }
             else
@@ -119,5 +118,10 @@ namespace BusinessLogic
         public decimal UnionDues() => 0;
 
         public decimal Insurance() => 0;
+
+        protected virtual void OnHighWageInput(EventArgs e)
+        {
+            HSAlert?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

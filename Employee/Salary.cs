@@ -27,6 +27,11 @@ namespace BusinessLogic
 
         public Salary(string s, string f, string l, decimal a) : base(s, f, l)
         {
+            if (a > 215000)
+            {
+                base.OnHighWageInput(EventArgs.Empty);
+                Amount = a;
+            }
             Amount = a;
         }
 

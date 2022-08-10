@@ -19,11 +19,6 @@ namespace PayrollSamePage
 
         private string EmpName { get; set; }
 
-        public static string ReminderMethod(string message)
-        {
-            return message;
-        }
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -376,6 +371,7 @@ namespace PayrollSamePage
         {
             try
             {
+                selectedPerson.HSAlert += HandleNotify;
                 if (selectedPerson is Hourly)
                 {
                     foreach (Hourly emp in empList.Where(p => p.FirstName == EmpName))
@@ -399,6 +395,7 @@ namespace PayrollSamePage
                 }
                 if (selectedPerson is Salary)
                 {
+                    
                     foreach (Salary emp in empList.Where(p => p.FirstName == EmpName))
                     {
                         emp.FirstName = txtFirst.Text;
@@ -414,9 +411,9 @@ namespace PayrollSamePage
                             PostalCode = txtZip.Text
                         };
                         emp.Email = txtEmail.Text;
-                        //emp.Amount += HandleNotify();
                         emp.Amount = decimal.Parse(txtSalary.Text);
                     }
+                    
                 }
                 if (selectedPerson is SoftwareDev)
                 {
@@ -458,7 +455,9 @@ namespace PayrollSamePage
                         emp.Salary = decimal.Parse(txtSalary.Text);
                     }
                 }
-                
+
+                selectedPerson.HSAlert -= HandleNotify;
+
                 lvEmpList.ItemsSource = null;
                 lvEmpList.ItemsSource = empList;
 
@@ -886,8 +885,10 @@ namespace PayrollSamePage
                         from emp in empList
                         select emp.CalculatePay();
 
-                    lvFilterOutput.Items.Clear();
-                    lvFilterOutput.Items.Add($"All Employees' Net Pay Average: ${Math.Round(avg.Average())}");
+                    var avgList = new List<string>();
+                    avgList.Add($"All Employees' Net Pay Average: ${Math.Round(avg.Average())}");
+
+                    lvFilterOutput.ItemsSource = avgList;
                     break;
 
                 case 6:
@@ -902,8 +903,10 @@ namespace PayrollSamePage
                     var bonusMax = bonus.Max(m => m.Value);
                     var bmName = bonus.FirstOrDefault(em => em.Value == bonusMax).Key;
 
-                    lvFilterOutput.Items.Clear();
-                    lvFilterOutput.Items.Add($"Employee: {bmName} | Net Bonus: ${Math.Round(bonusMax, 2)}");
+                    var bonusList = new List<string>();
+                    bonusList.Add($"Employee: {bmName} | Net Bonus: ${Math.Round(bonusMax, 2)}");
+
+                    lvFilterOutput.ItemsSource = bonusList;
                     break;
             }
         }
